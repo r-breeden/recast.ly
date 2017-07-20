@@ -6,7 +6,7 @@ var VideoList = (prop) => (
 
 ReactDOM.render(
   <VideoList videos = {window.exampleVideoData} />,
-  document.getElementsByClassName(".col-md-5")
+  document.getElementsByClassName('.col-md-5')
  ); 
 
 
