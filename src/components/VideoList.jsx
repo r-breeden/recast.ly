@@ -1,14 +1,14 @@
 var VideoList = (prop) => (
-  prop.videos.map(vid => (<div><h5><em><VideoListEntry video={vid}/></em></h5></div>)) 
- 
-  //<div><h5><em><VideoListEntry video={prop.videos[0]}/></em></h5></div>
-  //<div><h5><em><VideoListEntry video={prop.videos[0]}/></em> view goes here</h5></div>
+  <div className="video-list"> 
+   {prop.videos.map ((vid) => (<div><h5><em><VideoListEntry video={vid}/></em></h5></div>))} 
+  </div>
 );
 
 ReactDOM.render(
   <VideoList videos = {window.exampleVideoData} />,
-  document.getElementByClassName('col-md-5')
+  document.getElementsByClassName(".col-md-5")
  ); 
+
 
 // PropTypes tell other developers what `props` a component expects
 // Warnings will be shown in the console when the defined rules are violated
@@ -16,7 +16,6 @@ VideoList.propTypes = {
   videos: React.PropTypes.array.isRequired
 };
 
-console.log('test');
 
 
 
@@ -25,12 +24,11 @@ console.log('test');
 window.VideoList = VideoList;
 
   /*<div className="video-list">
-    <h5>
-      <em>
-      videoListEntry
-      </em>
-      {prop.videos.map(video => 
-        <VideoListEntry video={video} />
-      )}
-    </h5>
+    <div><h5><em>videoListEntry</em> view goes here</h5></div>
+    <div><h5><em>videoListEntry</em> view goes here</h5></div>
+    <div><h5><em>videoListEntry</em> view goes here</h5></div>
+    <div><h5><em>videoListEntry</em> view goes here</h5></div>
+    <div><h5><em>videoListEntry</em> view goes here</h5></div>
+//prop.videos.forEach(vid => ($(".col-md-5").append(<div><h5><em><VideoListEntry video={vid}/></em></h5></div>)))
   </div> */
+//<div><h5><em><VideoListEntry video={prop.videos[0]}/></em></h5></div> 
