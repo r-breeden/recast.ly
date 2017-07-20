@@ -1,3 +1,7 @@
+//import React, { Component } from 'react';
+//import ReactDOM from 'react-dom';
+
+
 var App = () => (
   <div>
     <nav className="navbar">
@@ -7,10 +11,10 @@ var App = () => (
     </nav>
     <div className="row">
       <div className="col-md-7">
-        <div><h5><em>videoPlayer</em> view goes here</h5></div>
+        <div><h5><em>eventual video player</em></h5></div>
       </div>
       <div className="col-md-5">
-        <div><h5><em>videoList</em> view goes here</h5></div>
+        <div><h5><em><VideoList videos = {window.exampleVideoData}/></em></h5></div>
       </div>
     </div>
   </div>
@@ -19,3 +23,10 @@ var App = () => (
 // In the ES6 spec, files are "modules" and do not share a top-level scope
 // `var` declarations will only exist globally where explicitly defined
 window.App = App;
+
+ReactDOM.render(
+  <App/>,
+  document.getElementById('app')
+);
+
+console.log('test');
